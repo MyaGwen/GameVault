@@ -3,6 +3,7 @@ let bar1 = document.getElementsByClassName('bar')[0];
 let bar2 = document.getElementsByClassName('bar')[1];
 let bar3 = document.getElementsByClassName('bar')[2];
 let navList = document.getElementById('main-nav-ul');
+navList.style.display = 'none';
 
 let isClicked = false;
 
@@ -14,7 +15,7 @@ menu.addEventListener('click', function () {
         bar2.style.opacity = '';
         bar3.style.top = '';
         bar3.style.transform = '';
-        navList.style.display = 'none';
+    navList.style.display = 'none';
     } else {
         // Apply styles for clicked state
         bar1.style.top = '5px';
