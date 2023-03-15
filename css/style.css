@@ -222,8 +222,8 @@ footer a {
 
 .footer-links-container {
     display: flex;
-  justify-content: space-between;
-  align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-links ul {
@@ -251,11 +251,11 @@ footer a {
         display: flex;
     }
 
-    #main-nav ul {
+    /* #main-nav ul {
         margin-top: 10px;
         margin-right: 8px;
         justify-content: center;
-    }
+    } */
 
     nav ul {
         display: block;
@@ -266,7 +266,8 @@ footer a {
         width: 50%;
         background-color: #222;
         padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 5px 5px;
+        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
     }
 
     nav li {
