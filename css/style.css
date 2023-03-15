@@ -91,16 +91,6 @@ nav a:hover {
     transform: translateY(7px) rotate(0deg);
 }
 
-.menu-ul {
-    display: none;
-    /* hide the ul element by default */
-}
-
-.menu-visible {
-    display: block;
-    /* show the ul element when the class is added */
-}
-
 .search-bar {
     display: flex;
     align-items: center;
