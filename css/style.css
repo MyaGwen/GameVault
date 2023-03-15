@@ -104,6 +104,7 @@ nav a:hover {
     border-radius: 5px 0 0 5px;
     font-size: 16px;
     flex-grow: 1;
+    outline: none;
 }
 
 .search-bar button[type="submit"] {
@@ -147,10 +148,9 @@ nav a:hover {
 
 .trending-container {
     display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-    padding-bottom: 50px;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    /* gap: 40px; */
 }
 
 .trending-item {
@@ -159,10 +159,12 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    
+
 }
 
 .trending-item h2 {
+    margin: 0;
+    padding: 0;
     text-transform: capitalize;
 }
 
@@ -173,14 +175,13 @@ nav a:hover {
 }
 
 .trending-item a {
-    color: #000;
+    color: #222;
     text-decoration: none;
     margin-top: 15px;
-padding: 10px 20px;
-background-color: #ffd700;
-color: #222;
-font-weight: bold;
-border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 
