@@ -4,7 +4,6 @@ let bar2 = document.getElementsByClassName('bar')[1];
 let bar3 = document.getElementsByClassName('bar')[2];
 let navList = document.getElementById('main-nav-ul');
 
-
 let isClicked = false;
 
 menu.addEventListener('click', function () {
@@ -15,7 +14,7 @@ menu.addEventListener('click', function () {
         bar2.style.opacity = '';
         bar3.style.top = '';
         bar3.style.transform = '';
-        navList.classList.add('hidden');
+        navList.style.display = 'none';
     } else {
         // Apply styles for clicked state
         bar1.style.top = '5px';
@@ -23,11 +22,9 @@ menu.addEventListener('click', function () {
         bar2.style.opacity = '0';
         bar3.style.top = '5px';
         bar3.style.transform = 'rotate(-45deg)';
-        navList.classList.remove('hidden');
+        navList.style.display = 'block';
     }
 
     // Toggle isClicked
     isClicked = !isClicked;
 });
-
-
