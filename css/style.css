@@ -1,3 +1,14 @@
+:root {
+    --color-primary: #222;
+    --color-secondary: #fff;
+    --color-accent: #ffd700;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 html {
     height: 100%;
     width: 100%;
@@ -7,13 +18,23 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: var(--color-primary);
+    font-family: 'Lato', sans-serif;
 }
 
 /* !General styles */
 a {
     text-decoration: none;
-    color: inherit;
 }
+
+input[type="submit"], a {
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 
 ul li {
     list-style-type: none;
@@ -21,7 +42,7 @@ ul li {
 
 /* Header styles */
 header {
-    background-color: #222;
+    background-color: var(--color-primary);
     color: #fff;
     display: flex;
     align-items: center;
@@ -36,7 +57,6 @@ header {
 
 nav {
     display: flex;
-
     align-items: center;
 }
 
@@ -91,16 +111,6 @@ nav a:hover {
     transform: translateY(7px) rotate(0deg);
 }
 
-.menu-ul {
-    display: none;
-    /* hide the ul element by default */
-}
-
-.menu-visible {
-    display: block;
-    /* show the ul element when the class is added */
-}
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -119,7 +129,7 @@ nav a:hover {
 
 .search-bar button[type="submit"] {
     background-color: #ffd700;
-    color: #222;
+    color: var(--color-primary);
     border: none;
     padding: 5px;
     border-radius: 0 5px 5px 0;
@@ -148,12 +158,14 @@ nav a:hover {
 /* !Trending today */
 
 .trending-today {
-    padding: 5%;
+    padding: 2% 5% 5%;
 }
 
-.trending-today h2 {
+.trending-today-header {
     padding: 0;
     margin: 0 0 10px;
+    letter-spacing: 1px;
+    font-size: 30px;
 }
 
 .trending-container {
@@ -174,7 +186,7 @@ nav a:hover {
 }
 
 .trending-item h2 {
-    margin: 0;
+    margin: 0 0 10px;
     padding: 0;
     text-transform: capitalize;
 }
@@ -186,7 +198,7 @@ nav a:hover {
 }
 
 .trending-item a {
-    color: #222;
+    color: var(--color-primary);
     text-decoration: none;
     margin-top: 15px;
     padding: 10px 20px;
@@ -195,12 +207,17 @@ nav a:hover {
     border-radius: 5px;
 }
 
+.trending-item a:hover {
+    background-color: var(--color-primary);
+    color: #ffd700;
+}
+
 
 
 
 /* !Footer styles */
 footer {
-    background-color: #222;
+    background-color: var(--color-primary);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -232,114 +249,99 @@ footer a {
     margin: 0;
     gap: 30px;
     font-size: 14px;
-
-    /* justify-content: center;
-    flex-direction: row; */
 }
 
-/* !about */
-
+/* !ABOUT */
 .about {
+    padding: 10px 50px 80px;
     max-width: 800px;
-    margin: 2em auto;
-    padding: 0 1em;
-  }
+    margin: 0 auto;
+}
+
+.about h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
 
 /* !CONTACT US */
 
-
-/* Center the form */
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 100px;
 }
 
-/* Style the form labels */
+/* !form labels */
 .contact-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-/* Style the form input fields */
+/* !form input fields */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
 
-/* Style the submit button */
-.contact-form input[type="submit"] {
-  background-color: #ffd700;
-  color: #222;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+/* !submit button */
+.contact-form input[type="submit"], .about-btn {
+    background-color: #ffd700;
+    color: var(--color-primary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.contact-form input[type="submit"]:hover {
-    background-color: #222;
-  color: #ffd700;
+.contact-form input[type="submit"]:hover, .about-btn:hover {
+    background-color: var(--color-primary);
+    color: #ffd700;
 }
 
-/* Style the form error messages */
+/* !form error messages */
 .contact-form .error {
-  color: red;
-  margin-bottom: 10px;
+    color: red;
+    margin-bottom: 10px;
 }
 
-/* Style the success message */
-.contact-form .success {
-  color: green;
-  margin-bottom: 10px;
-}
-
-.thankyou {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
-}
-
-.thank-you {
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	padding: 20px;
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.thank-you h2 {
-	margin-bottom: 10px;
-}
-
-.thank-you p {
-	margin-bottom: 10px;
-}
-
-.button {
-	display: inline-block;
-	background-color: #000;
-	color: #fff;
-	padding: 10px 20px;
-	border-radius: 5px;
-	text-decoration: none;
+/* .button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .button:hover {
-	background-color: #555;
-}
+    background-color: #555;
+} */
 
 
 
 
 /* !Media queries */
+
+/* @media only screen and (min-width: 600px) {
+    #main-nav-ul {
+        display: none;
+    }
+} */
 
 @media only screen and (max-width: 768px) {
     header {
@@ -351,6 +353,11 @@ footer a {
     #main-nav {
         display: flex;
     }
+
+    /* 
+    #main-nav-ul {
+        display: none;
+    } */
 
     /* #main-nav ul {
         margin-top: 10px;
@@ -365,7 +372,7 @@ footer a {
         top: 57px;
         right: 0;
         width: 50%;
-        background-color: #222;
+        background-color: var(--color-primary);
         padding: 20px;
         border-radius: 0 0 5px 5px;
         /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
@@ -447,11 +454,11 @@ footer a {
         margin-bottom: 10px;
     }
 
-  .contact-form {
-  padding: 15%;
-}
+    .contact-form {
+        padding: 15%;
+    }
 
-/* .contact-form input[type="submit"] {
+    /* .contact-form input[type="submit"] {
     text-align: center;
 } */
 }
