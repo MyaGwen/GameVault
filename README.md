@@ -7,5 +7,5 @@
 <h2>Contributing</h2>
 <p>If you have a game that you want to add to GameVault, you can do so by submitting a pull request on GitHub. Please make sure that the game is legal and does not violate any copyright laws.</p>
 
-<h2>License</h2>h2>
+<h2>License</h2>
 <p>GameVault is licensed under the MIT License. See LICENSE for more information.</p>
