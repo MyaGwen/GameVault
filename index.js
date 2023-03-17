@@ -29,3 +29,39 @@ menu.addEventListener('click', function () {
     // Toggle isClicked
     isClicked = !isClicked;
 });
+
+// retrieve DOM elements
+const searchForm = document.querySelector('.search-bar');
+const searchInput = document.querySelector('.search-bar input');
+const games = document.querySelectorAll('.trending-item');
+const news = document.querySelectorAll('.news-item');
+const star = document.querySelector('.img-label span');
+
+// add event listener to search form
+searchForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const query = searchInput.value.trim().toLowerCase();
+
+  // filter games
+  games.forEach(game => {
+    const title = game.querySelector('h2').textContent.trim().toLowerCase();
+    if (title.includes(query)) {
+      game.style.display = 'block';
+     
+      star.style.display = 'none';
+    
+    } else {
+      game.style.display = 'none';
+    }
+  });
+
+  // filter news
+  news.forEach(newsItem => {
+    const title = newsItem.querySelector('.news-title').textContent.trim().toLowerCase();
+    if (title.includes(query)) {
+      newsItem.style.display = 'block';
+    } else {
+      newsItem.style.display = 'none';
+    }
+  });
+});
